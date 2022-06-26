@@ -250,7 +250,8 @@ This command should be used if Compliment fails to pick up new classnames
 and methods from dependencies that were loaded dynamically after the REPL
 has started."
   (interactive)
-  (cider-sync-request:complete-flush-caches))
+  (cider-sync-request:complete-flush-caches)
+  (setq cider-completion-last-context nil))
 
 (defun cider-company-location (var)
   "Open VAR's definition in a buffer.

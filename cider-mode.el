@@ -1068,6 +1068,7 @@ property."
                                   x-gtk-use-system-tooltips
                                   font-lock-fontify-region-function
                                   clojure-get-indent-function))
+    (setq cider-completion-last-context nil)
     (remove-hook 'completion-at-point-functions #'cider-complete-at-point t)
     (when cider-use-xref
       (remove-hook 'xref-backend-functions #'cider--xref-backend 'local))
